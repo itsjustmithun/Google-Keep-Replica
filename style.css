@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F7F9F9  ;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(255, 187, 0);
+  height: 64px;
+  position: fixed; /* Set the navbar to fixed position */
+  width: 100%; /* Full width */
+  top: 0;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 18px 15px 20px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: 'Roboto';
+}
+
+.topnav a:hover {
+
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.search_bar {
+  margin-top: 6px;
+  position: relative;  
+  height: 50px;
+  width: 40%;
+  float: left; 
+}
+.nav-search {
+  margin-left: 1em;
+  font-size: 18px;
+  border: none;
+  background: none;
+  height: 100%;
+  width: 100%;
+  float: left; 
+  background: rgba(0,0,0,0.1); 
+  line-height: 3em;
+  padding-left: 1em;  
+  border-radius: 3px;
+  text-indent: 3em;
+  transition: all .7s  
+}
+.nav-search::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.nav-search:focus {
+  background-color: #F7DC6F;
+  animation-duration: 3s;  
+}
+
+.search-icon {
+  position: relative;
+  top: -40px;
+  left: 25px;
+  color: rgba(0, 0, 0, 0.5);  
+  font-size: 30px;
+}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 265px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+#main {
+ padding: 10px;
+ margin-top: 70px;
+ margin-left: 265px;
+ transition: margin-left .5s; /* If you want a transition effect */
+}
+.side-content{
+  padding: 10px 20px;
+}
+
+.add-card {
+  display: inline-block;
+  background: #F8F9F9;
+  width: 600px;
+  padding: 10px;
+  font-size: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.input-note{
+  background-color:rgba(0, 0, 0, 0);
+  border: none;
+  outline:none;
+  width: 90%;
+}
+.hidden-input{
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The myGrid Container */
+.myGrid {
+  margin: 1.5em auto;
+  max-width: 1024px;
+  column-gap: 1em;
+}
+
+/* The myGrid Brick */
+.item {
+  display: inline-block;
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  font-size: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+
+/* myGrid on large screens */
+@media only screen and (min-width: 1024px) {
+  .myGrid {
+    column-count: 4;
+  }
+}
+
+/* myGrid on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .myGrid {
+    column-count: 3;
+  }
+}
+
+/* myGrid on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .myGrid {
+    column-count: 2;
+  }
+}
