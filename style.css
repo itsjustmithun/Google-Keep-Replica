@@ -61,6 +61,12 @@ body {
   animation-duration: 3s;  
 }
 
+
+/* -------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------------------*/
+
 .search-icon {
   position: relative;
   top: -40px;
@@ -83,6 +89,15 @@ body {
  margin-top: 70px;
  margin-left: 265px;
  transition: margin-left .5s; /* If you want a transition effect */
+}
+
+#sub-option {
+  background-color: #BB8FCE;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 .side-content{
   padding: 10px 20px;
