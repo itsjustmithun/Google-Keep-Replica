@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Google Keep Replica
 
 Basic Google Keep Clone that can add and remove notes
@@ -14,7 +14,3 @@ https://github.com/itsjustmithun/Google-Keep-Replica
 '''
 index.html
 '''
-=======
-# Google-Keep-Replica
-Basic Google Keep clone that can add and remove notes 
->>>>>>> aa22abfd8ff4724f46844f4a14967d7e51ba1a2f
