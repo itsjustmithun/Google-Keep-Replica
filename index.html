@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topnav">
+    <a onclick="toggleNav()" href="#"><img style="margin-bottom: -5px; width: 65%;" src="menu.png"></a>
+    <a href="#"><img style="margin-bottom: -7px;"src="google_logo.svg"> Keep</a>
+    <div class="search_bar">
+      <input class="nav-search" placeholder="Search"></input>
+      <i class="fas fa-search search-icon"></i>   
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+   <a href="#" onclick="labelLoad(0);"> <div class="side-content"> 
+      <svg style="margin: 0px 30px -5px 0px;" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>Notes</div></a>
+      <div class="side-content"> 
+        <svg style="margin: 0px 30px -5px 0px;" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="m0 0h24v24h-24z" fill="none"></path><path d="m20.78 13.16l-6.05-3.02c-0.23-0.09-0.47-0.14-0.73-0.14h-1v-2h1.75c1.66 0 3-1.34 3-3s-1.34-3-3-3c-0.75 0-1.14 0.22-1.75 0.75v-0.75c0-1.1-0.9-2-2-2s-2 0.9-2 2v0.75c-0.61-0.53-1-0.75-1.75-0.75-1.66 0-3 1.34-3 3s1.34 3 3 3h1.75v8.31l-4.57-0.95c-0.1-0.02-0.21-0.03-0.32-0.03-0.41 0-0.79 0.17-1.06 0.44l-1.05 1.06 6.59 6.59c0.36 0.36 0.86 0.58 1.41 0.58h9.06c1 0 1.77-0.74 1.92-1.7l1-7.03c0.01-0.09 0.02-0.18 0.02-0.27 0-0.83-0.5-1.54-1.22-1.84zm-11.53-6.16h-2c-1.1 0-2-0.9-2-2s0.9-2 2-2 2 0.9 2 2v2zm3.5-2c0-1.1 0.9-2 2-2s2 0.9 2 2-0.9 2-2 2h-2v-2z"></path></svg>Reminders</div>
+        <hr style="width: 90%;">
+       <a href="#" onclick="labelLoad('Inspirational');"> <div class="side-content"> 
+          <svg style="margin: 0px 30px -5px 0px;" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="m0 0h24v24h-24z" fill="none"></path><path d="m17.63 5.84c-0.36-0.51-0.96-0.84-1.63-0.84l-11 0.01c-1.1 0-2 0.89-2 1.99v10c0 1.1 0.9 1.99 2 1.99l11 0.01c0.67 0 1.27-0.33 1.63-0.84l4.37-6.16-4.37-6.16z"></path></svg>Inspirational</div></a>
+        <a href="#" onclick="labelLoad('Personal');">   <div class="side-content"> 
+          <svg style="margin: 0px 30px -5px 0px;" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="m0 0h24v24h-24z" fill="none"></path><path d="m17.63 5.84c-0.36-0.51-0.96-0.84-1.63-0.84l-11 0.01c-1.1 0-2 0.89-2 1.99v10c0 1.1 0.9 1.99 2 1.99l11 0.01c0.67 0 1.27-0.33 1.63-0.84l4.37-6.16-4.37-6.16z"></path></svg>Personal</div></a>
+         <a href="#" onclick="labelLoad('Work');">  <div class="side-content"> 
+          <svg style="margin: 0px 30px -5px 0px;" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="m0 0h24v24h-24z" fill="none"></path><path d="m17.63 5.84c-0.36-0.51-0.96-0.84-1.63-0.84l-11 0.01c-1.1 0-2 0.89-2 1.99v10c0 1.1 0.9 1.99 2 1.99l11 0.01c0.67 0 1.27-0.33 1.63-0.84l4.37-6.16-4.37-6.16z"></path></svg>Work</div></a>
+        </div>
+        <div id="main">
+          <center><div class="add-card">
+            <div id="input_title" class="hidden-input">
+              <input id="title_value" type="text" style="font-size: 15px;" class="input-note" placeholder="Title">
+            </div>
+            <br>
+            <input type="text" id="input_main" class="input-note" placeholder="Take a note...">
+            <br><br>
+            <div id="input_extra" class="hidden-input">
+             <div style="float: left;">
+               <img src="download.svg">&nbsp;<select id="color_value">
+                <option value="#FFFFFF">Color</option>
+                <option value="#FEF4F4">White</option>
+                <option value="#FB4A3A">Red</option>
+                <option value="#FB5C3A">Orange</option>
+                <option value="#FBE93A">Yellow</option>
+              </select>&nbsp;
+              <img src="label.svg">&nbsp;<select id="label_value">
+                <option value="none">Label</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+              </select>
+            </div>
+            <div style="float: right;"><a href="#" onclick="submitFunction();">Submit</a></div>
+
+          </div>
+        </div></center>
+
+        <div style="display:none;"id="button_label">
+          <select onChange="changeLabel(this);">
+           <option value="none">Label</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+          </select>
+        </div>
+         <div style="display:none;"id="button_color">
+          <img src="download.svg">&nbsp;<select onChange="changeColor(this);">
+            <option value="#FFFFFF">Color</option>
+            <option value="#FEF4F4">White</option>
+            <option value="#FB4A3A">Red</option>
+            <option value="#FB5C3A">Orange</option>
+            <option value="#FBE93A">Yellow</option>
+          </select>
+        </div>
+        <div style="display:none;" id="button_delete">
+          <svg width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px" class="gb_Ac"><path d="m6 19c0 1.1 0.9 2 2 2h8c1.1 0 2-0.9 2-2v-12h-12v12zm13-15h-3.5l-1-1h-5l-1 1h-3.5v2h14v-2z"></path><path d="m0 0h24v24h-24z" fill="none"></path></svg>
+        </div>
+        <div class="myGrid" id="myGrid">
+          
+
+
+      </div>
+
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+      <script type="text/javascript" src="index.js"> </script>
+
+
+
+    </body>
+    </html>
