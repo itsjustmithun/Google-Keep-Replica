@@ -57,7 +57,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 .nav-search:focus {
-  background-color: #F7DC6F;
+  background-color: #fff;
   animation-duration: 3s;  
 }
 
